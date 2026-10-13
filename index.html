@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="marca">
+            <img src="imagenes/logo2.png" alt="Logo" class="logo">
+        </div>
+
+        <div class="menu">
+            <p class="boton">Inicio</p>
+            <p class="boton">Nuestros Servicios</p>
+            <p class="boton-telefono"> +57 300 123 4567</p>
+        </div>
+    </header>
+    <div class="div1">
+        <h1>VIVE LA MEJOR EXPERIENCIA CON <br> SANTANDER AVENTURA</h1>
+        <button>Conoce Nuestras Experiencias</button>
+    </div>
+
+    <section class="carrusel" aria-label="Aventuras en Santander">
+        <div class="carrusel-header">
+            <p>Explora Santander</p>
+            <h2>Algunas Fotos de Nuestras Experiencia </h2>
+        </div>
+        <input type="radio" name="aventura" id="aventura-1" aria-label="Aventura 1" checked>
+        <input type="radio" name="aventura" id="aventura-2" aria-label="Aventura 2">
+        <input type="radio" name="aventura" id="aventura-3" aria-label="Aventura 3">
+        <div class="carrusel-marco">
+            <div class="carrusel-flecha">
+                <label class="anterior-1" for="aventura-3" aria-label="Aventura anterior">&#8592;</label>
+                <label class="anterior-2" for="aventura-1" aria-label="Aventura anterior">&#8592;</label>
+                <label class="anterior-3" for="aventura-2" aria-label="Aventura anterior">&#8592;</label>
+            </div>
+            <div class="carrusel">
+                <div class="carrusel-track">
+                    <figure><img src="imagenes/trekking.jpg" alt="Ruta de trekking por Santander">
+                        <figcaption>Senderos para descubrir</figcaption>
+                    </figure>
+                    <figure><img src="imagenes/rafting-suarez.jpg" alt="Rafting en el río Suárez">
+                        <figcaption>Emoción en el río Suárez</figcaption>
+                    </figure>
+                    <figure><img src="imagenes/cueva_indio.jpg" alt="Exploración de la Cueva del Indio">
+                        <figcaption>Explora la Cueva del Indio</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="carrusel-flecha">
+                <label class="siguiente-1" for="aventura-2" aria-label="Aventura siguiente">&#8594;</label>
+                <label class="siguiente-2" for="aventura-3" aria-label="Aventura siguiente">&#8594;</label>
+                <label class="siguiente-3" for="aventura-1" aria-label="Aventura siguiente">&#8594;</label>
+            </div>
+        </div>
+        <nav class="carrusel-puntos" aria-label="Elegir aventura">
+            <label for="aventura-1" aria-label="Mostrar aventura 1"></label>
+            <label for="aventura-2" aria-label="Mostrar aventura 2"></label>
+            <label for="aventura-3" aria-label="Mostrar aventura 3"></label>
+        </nav>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+
+body {
+    background-color: #fafafa;
+    color: #1e2229;
+  
+}
+
+
+header {
+    background-color: rgb(30, 94, 58);
+    z-index: 1000;
+    padding: 0px 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", 'Arial Narrow Bold', sans-serif;
+
+    .marca {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .marca img {
+        height: 75px;
+    }
+
+    .marca h2 {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .boton {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    opacity: 0.8;
+    color: #F39C12;
+}
+
+.boton-telefono {
+    color: #ffffff;
+    background-color: #c0392b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.boton-telefono:hover {
+    background-color: #e74c3c;
+}
+}
+
+.div1 {
+    background-image: url(imagenes/Hero.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+
+    h1 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    button {
+        background-color: #c96b45;
+        padding: 6px 15px;
+        border-radius: 20px;
+        border: 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 17px;
+
+    }
+}
+
+.carrusel {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    font-family: system-ui, -apple-system, sans-serif;
+
+    >input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        clip-path: inset(50%);
+    }
+
+    .carrusel-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #64748b;
+            margin-bottom: 0.25rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #1e293b;
+        }
+    }
+
+    .carrusel-marco {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .carrusel-flecha {
+        flex: 0 0 2.5rem;
+
+        label {
+            display: none;
+            width: 2.5rem;
+            height: 2.5rem;
+            place-items: center;
+            border: 1px solid #087d50;
+            border-radius: 50%;
+            color: #087d50;
+            cursor: pointer;
+            font-size: 1.25rem;
+        }
+    }
+
+    #aventura-1:checked~.carrusel-marco .anterior-1,
+    #aventura-1:checked~.carrusel-marco .siguiente-1,
+    #aventura-2:checked~.carrusel-marco .anterior-2,
+    #aventura-2:checked~.carrusel-marco .siguiente-2,
+    #aventura-3:checked~.carrusel-marco .anterior-3,
+    #aventura-3:checked~.carrusel-marco .siguiente-3 {
+        display: grid;
+    }
+
+    .carrusel {
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .carrusel-track {
+        display: flex;
+        transition: transform 400ms ease;
+    }
+
+    figure {
+        position: relative;
+        flex: 0 0 100%;
+        aspect-ratio: 16 / 8;
+        margin: 0;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        figcaption {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            left: 1rem;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-shadow: 0 1px 4px #000;
+        }
+    }
+
+    #aventura-2:checked~.carrusel-marco .carrusel-track {
+        transform: translateX(-100%);
+    }
+
+    #aventura-3:checked~.carrusel-marco .carrusel-track {
+        transform: translateX(-200%);
+    }
+
+    .carrusel-puntos {
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+        margin-top: 1rem;
+
+        label {
+            width: 0.7rem;
+            height: 0.7rem;
+            border-radius: 50%;
+            background: #aab5ad;
+            cursor: pointer;
+        }
+    }
+
+    #aventura-1:checked~.carrusel-puntos label[for="aventura-1"],
+    #aventura-2:checked~.carrusel-puntos label[for="aventura-2"],
+    #aventura-3:checked~.carrusel-puntos label[for="aventura-3"] {
+        background: #087d50;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 10px;
+
+        .marca img {
+            height: 50px;
+        }
+
+        .menu {
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .boton,
+        .boton-telefono {
+            font-size: 13px;
+            padding: 6px 12px;
+        }
+    }
+
+    body {
+        padding-top: 130px;
+    }
+}
