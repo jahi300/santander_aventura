@@ -367,7 +367,7 @@ section.testimonio {
     .testimonio-contenedor {
         display: grid;
         max-width: 1000px;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 1.25rem;
         margin: 0 auto;
     }
