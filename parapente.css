@@ -1,100 +1,245 @@
-body {
-    background-color: #fafafa;
-    color: #1e2229;
-
+:root {
+    color-scheme: light;
+    --verde: rgb(30, 94, 58);
+    --rojo: #c0392b;
+    --naranja: #f39c12;
+    --fondo: #f4f6f5;
+    --texto: #1e2229;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 100px;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Montserrat", "Arial Narrow Bold", sans-serif;
+}
 
 header {
-    background-color: rgb(30, 94, 58);
-    z-index: 1000;
-    padding: 0px 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     position: fixed;
-    width: 100%;
+    z-index: 1000;
     top: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 70px;
+    background-color: var(--verde);
+}
 
-    .marca {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-    .menu {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-    }
+.marca img {
+    height: 75px;
+}
 
-    .marca img {
-        height: 75px;
-    }
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
-    .marca h2 {
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: bold;
-    }
+.boton {
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
 
-    .boton {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 15px;
-        cursor: pointer;
-    }
+.boton:hover {
+    color: var(--naranja);
+}
 
-    .boton:hover {
-        opacity: 0.8;
-        color: #F39C12;
-    }
+.boton-telefono {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: var(--rojo);
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
 
-    .boton-telefono {
-        color: #ffffff;
-        background-color: #c0392b;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 15px;
-        padding: 8px 20px;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
-    }
+.boton-telefono:hover {
+    background-color: #e74c3c;
+}
 
-    .boton-telefono:hover {
-        background-color: #e74c3c;
-    }
+.contenido-parapente {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    align-items: center;
+    gap: 24px 36px;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 48px 24px 0;
+}
+
+.contenido-parapente h1 {
+    grid-column: 1 / -1;
+    color: var(--verde);
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contenido-parapente video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    background-color: #15231b;
+    box-shadow: 0 12px 28px rgb(0 0 0 / 16%);
+    object-fit: cover;
+}
+
+.contenido-parapente > p {
+    max-width: 45ch;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.contenido-detalle {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.8fr);
+    align-items: start;
+    gap: 28px;
+    margin-top: 18px;
+}
+
+.fechas {
+    position: sticky;
+    top: 120px;
+    display: grid;
+    gap: 14px;
+    padding: 24px;
+    border-top: 4px solid var(--rojo);
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 8px 22px rgb(0 0 0 / 7%);
+}
+
+.fechas h2,
+.recomendaciones h2 {
+    color: var(--verde);
+    font-size: 1.5rem;
+}
+
+.fechas label {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.fechas select {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 10px;
+    border: 1px solid #c9d1cc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: var(--texto);
+    font: inherit;
+}
+
+.fechas button {
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 6px;
+    background-color: var(--rojo);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.fechas button:hover {
+    transform: translateY(-2px);
+    background-color: #a93226;
+}
+
+.fechas button:focus-visible,
+.fechas select:focus-visible {
+    outline: 3px solid var(--naranja);
+    outline-offset: 3px;
+}
+
+.recomendaciones > p {
+    margin: 10px 0 20px;
+    line-height: 1.7;
+}
+
+.guia_reserva {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.guia_reserva1 {
+    padding: 18px;
+    border-top: 3px solid var(--verde);
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.guia_reserva1 h3 {
+    margin-bottom: 10px;
+    color: var(--verde);
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+.guia_reserva1 p,
+.guia_reserva1 li {
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.guia_reserva1 ul {
+    padding-left: 20px;
+}
+
+.guia_reserva1 li + li {
+    margin-top: 8px;
 }
 
 footer {
-    background-color: rgb(30, 94, 58);
-    color: white;
-    margin-top: 50px;
+    margin-top: 56px;
+    background-color: var(--verde);
+    color: #fff;
+}
 
-    .info {
+.info {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     align-items: flex-start;
     justify-content: space-around;
-    padding: 10px 0 10px 0;
-}
-
-.creditos {
-    text-align: center;
-    padding: 10px;
+    padding: 30px 24px;
 }
 
 .seccion {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .seccion p:hover {
@@ -103,18 +248,95 @@ footer {
 }
 
 .titulo-footer {
-    font-weight: bold;
-    font-size: 16px;
     margin-bottom: 5px;
-    color: #F39C12;
+    color: var(--naranja);
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .linea hr {
-    border: none;
-    margin: 0 10px 0 10px;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px;
+    border: 0;
+    background-color: rgb(255 255 255 / 20%);
 }
 
+.creditos {
+    padding: 12px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .contenido-parapente {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contenido-parapente h1,
+    .contenido-detalle {
+        grid-column: 1;
+    }
+
+    .contenido-parapente > p {
+        max-width: none;
+    }
+
+    .contenido-detalle {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .fechas {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 126px;
+    }
+
+    header {
+        min-height: 126px;
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 16px;
+    }
+
+    .marca img {
+        height: 54px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 16px;
+    }
+
+    .boton,
+    .boton-telefono {
+        font-size: 13px;
+    }
+
+    .boton-telefono {
+        padding: 6px 12px;
+    }
+
+    .contenido-parapente {
+        gap: 18px;
+        padding: 32px 16px 0;
+    }
+
+    .contenido-parapente > p {
+        font-size: 1rem;
+    }
+
+    .guia_reserva {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
