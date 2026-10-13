@@ -1,0 +1,120 @@
+body {
+    background-color: #fafafa;
+    color: #1e2229;
+
+}
+
+
+header {
+    background-color: rgb(30, 94, 58);
+    z-index: 1000;
+    padding: 0px 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", 'Arial Narrow Bold', sans-serif;
+
+    .marca {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .marca img {
+        height: 75px;
+    }
+
+    .marca h2 {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .boton {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .boton:hover {
+        opacity: 0.8;
+        color: #F39C12;
+    }
+
+    .boton-telefono {
+        color: #ffffff;
+        background-color: #c0392b;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 8px 20px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .boton-telefono:hover {
+        background-color: #e74c3c;
+    }
+}
+
+footer {
+    background-color: rgb(30, 94, 58);
+    color: white;
+    margin-top: 50px;
+
+    .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 10px 0 10px 0;
+}
+
+.creditos {
+    text-align: center;
+    padding: 10px;
+}
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.seccion p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.titulo-footer {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #F39C12;
+}
+
+.linea hr {
+    border: none;
+    margin: 0 10px 0 10px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+}
+
