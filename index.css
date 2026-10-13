@@ -81,37 +81,80 @@ header {
 }
 
 .div1 {
-    background-image: url(imagenes/Hero.png);
+    position: relative;
+    isolation: isolate;
+    box-sizing: border-box;
+    background-image: linear-gradient(90deg, rgb(8 33 28 / 80%) 0%, rgb(8 33 28 / 48%) 52%, rgb(8 33 28 / 4%) 100%), linear-gradient(0deg, rgb(8 33 28 / 45%) 0%, transparent 58%), url(imagenes/Hero.png);
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 600px;
+    height: min(720px, 100svh);
+    min-height: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    gap: 10px;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-end;
+    gap: 1.1rem;
+    padding: 7rem max(2rem, calc((100% - 1160px) / 2)) 5rem;
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-eyebrow {
+        color: #f1d47b;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
 
     h1 {
+        max-width: 760px;
+        color: #fff;
         font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 3.4rem;
+        font-weight: 800;
+        line-height: 1.08;
+        text-shadow: 0 2px 18px rgb(0 0 0 / 25%);
     }
 
     button {
-        background-color: #c96b45;
-        padding: 6px 15px;
-        border-radius: 20px;
+        margin-top: 0.4rem;
+        padding: 0.9rem 1.35rem;
+        border-radius: 8px;
         border: 0;
+        background-color: #c0392b;
+        color: #fff;
+        cursor: pointer;
         font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 17px;
+        font-size: 1rem;
+        font-weight: 700;
+        transition: background-color 160ms ease, transform 160ms ease;
+    }
 
+    button:hover {
+        background-color: #a93226;
+        transform: translateY(-2px);
+    }
+
+    button:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 3px;
     }
 }
 
-.carrusel {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+section.carrusel {
+    background: linear-gradient(135deg, #0A5C36 0%, #0C3866 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+section.carrusel {
+    margin: 0;
+    padding: 3.25rem max(1.5rem, calc((100% - 1000px) / 2));
     font-family: system-ui, -apple-system, sans-serif;
 
     >input {
@@ -123,19 +166,33 @@ header {
 
     .carrusel-header {
         text-align: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
 
         p {
+            margin-bottom: 0.5rem;
+            color: #e8c96f;
             font-size: 0.9rem;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #64748b;
-            margin-bottom: 0.25rem;
         }
 
         h2 {
-            font-size: 1.75rem;
-            color: #1e293b;
+            max-width: 24ch;
+            margin: 0 auto;
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.15rem;
+            line-height: 1.2;
+            text-wrap: balance;
+
+            &::after {
+                display: block;
+                width: 3rem;
+                height: 3px;
+                margin: 0.9rem auto 0;
+                background-color: #c0392b;
+                content: "";
+            }
         }
     }
 
@@ -143,21 +200,35 @@ header {
         display: flex;
         align-items: center;
         gap: 0.75rem;
+        min-width: 0;
     }
 
     .carrusel-flecha {
-        flex: 0 0 2.5rem;
+        flex: 0 0 3rem;
 
         label {
             display: none;
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 3rem;
+            height: 3rem;
             place-items: center;
-            border: 1px solid #087d50;
+            border: 0;
             border-radius: 50%;
-            color: #087d50;
+            background-color: #fff;
+            color: #0a5c36;
             cursor: pointer;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
+            box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
+            transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+        }
+
+        label:hover {
+            background-color: #c0392b;
+            color: #fff;
+            transform: scale(1.06);
+        }
+
+        label:active {
+            transform: scale(0.96);
         }
     }
 
@@ -173,20 +244,36 @@ header {
     .carrusel {
         flex: 1;
         min-width: 0;
+        max-width: 100%;
         overflow: hidden;
         border-radius: 8px;
+        border: 1px solid rgb(255 255 255 / 55%);
+        box-shadow: 0 18px 42px rgb(0 0 0 / 24%);
     }
 
     .carrusel-track {
         display: flex;
+        width: 100%;
+        min-width: 0;
         transition: transform 400ms ease;
     }
 
     figure {
+        box-sizing: border-box;
         position: relative;
         flex: 0 0 100%;
+        min-width: 0;
         aspect-ratio: 16 / 8;
         margin: 0;
+
+        &::after {
+            position: absolute;
+            z-index: 1;
+            inset: 45% 0 0;
+            background: linear-gradient(transparent, rgb(0 0 0 / 58%));
+            content: "";
+            pointer-events: none;
+        }
 
         img {
             display: block;
@@ -197,12 +284,25 @@ header {
 
         figcaption {
             position: absolute;
+            z-index: 2;
             right: 1rem;
-            bottom: 1rem;
+            bottom: 3.4rem;
             left: 1rem;
             color: white;
             font-size: 1.25rem;
             font-weight: 700;
+            text-shadow: 0 1px 4px #000;
+        }
+
+        .aventura-descripcion {
+            position: absolute;
+            z-index: 2;
+            right: 1rem;
+            bottom: 1rem;
+            left: 1rem;
+            color: white;
+            font-size: 0.9rem;
+            line-height: 1.4;
             text-shadow: 0 1px 4px #000;
         }
     }
@@ -219,25 +319,159 @@ header {
         display: flex;
         justify-content: center;
         gap: 0.6rem;
-        margin-top: 1rem;
+        margin-top: 1.35rem;
 
         label {
             width: 0.7rem;
             height: 0.7rem;
             border-radius: 50%;
-            background: #aab5ad;
+            background: rgb(255 255 255 / 60%);
             cursor: pointer;
+            transition: background-color 160ms ease, transform 160ms ease;
+        }
+
+        label:hover {
+            transform: scale(1.15);
         }
     }
 
     #aventura-1:checked~.carrusel-puntos label[for="aventura-1"],
     #aventura-2:checked~.carrusel-puntos label[for="aventura-2"],
     #aventura-3:checked~.carrusel-puntos label[for="aventura-3"] {
-        background: #087d50;
+        background: #e8c96f;
     }
 }
 
+section.testimonio {
+    padding: 3.5rem max(1.5rem, calc((100% - 1000px) / 2));
+    background: linear-gradient(135deg, #eaf2ec 0%, #eaf0f6 100%);
+
+    > h2 {
+        margin-bottom: 2rem;
+        color: #193c2b;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 2rem;
+        line-height: 1.2;
+        text-align: center;
+
+        &::after {
+            display: block;
+            width: 3rem;
+            height: 3px;
+            margin: 0.9rem auto 0;
+            background-color: #c0392b;
+            content: "";
+        }
+    }
+
+    .testimonio-contenedor {
+        display: grid;
+        max-width: 1000px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin: 0 auto;
+    }
+
+    .testimonio-item {
+        display: flex;
+        min-width: 0;
+        min-height: 230px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        border: 1px solid #d8e2d9;
+        border-top: 4px solid #1e5e3a;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 8px 24px rgb(25 60 43 / 10%);
+    }
+
+    .testimonio-foto {
+        display: block;
+        width: 3.5rem;
+        height: 3.5rem;
+        flex: 0 0 3.5rem;
+        border-radius: 50%;
+        border: 2px solid #e8c96f;
+        object-fit: cover;
+        object-position: center 35%;
+    }
+
+    .testimonio-item p {
+        margin: 1.15rem 0 1.25rem;
+        color: #414d45;
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .testimonio-item h3 {
+        margin-top: auto;
+        color: #17603d;
+        font-size: 0.95rem;
+    }
+}
+
+
+
 @media (max-width: 768px) {
+    section.carrusel {
+        padding: 2.5rem 1.5rem;
+
+        .carrusel-header h2 {
+            font-size: 1.75rem;
+        }
+
+        .carrusel-flecha {
+            flex-basis: 2.5rem;
+
+            label {
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .div1 {
+        height: min(660px, 85svh);
+        min-height: 540px;
+        padding: 5rem 1.5rem 3rem;
+
+        h1 {
+            font-size: 2.4rem;
+        }
+    }
+
+    section.testimonio {
+        padding: 2.75rem 1.5rem;
+
+        > h2 {
+            font-size: 1.6rem;
+        }
+
+        .testimonio-contenedor {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .testimonio-item {
+            min-height: 0;
+        }
+    }
+
+    section.carrusel figure {
+        aspect-ratio: 4 / 3;
+
+        figcaption {
+            bottom: 3.6rem;
+            font-size: 1.1rem;
+        }
+
+        .aventura-descripcion {
+            font-size: 0.8rem;
+        }
+    }
+
     header {
         padding: 10px 20px;
         flex-direction: column;
