@@ -176,6 +176,12 @@ header {
     background-color: #a93226;
 }
 
+.fechas button:disabled {
+    transform: none;
+    background-color: #a9b1ac;
+    cursor: not-allowed;
+}
+
 .fechas button:focus-visible,
 .fechas select:focus-visible {
     outline: 3px solid var(--naranja);

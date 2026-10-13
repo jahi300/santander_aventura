@@ -112,6 +112,10 @@ header {
     display: block;
 }
 
+.cards .card a {
+    display: block;
+}
+
 .info-card {
     padding: 20px;
     display: flex;
@@ -140,7 +144,8 @@ header {
     color: #c0392b;
 }
 
-.info-card button {
+.enlace-servicio {
+    display: block;
     background-color: #c0392b;
     color: #ffffff;
     border: none;
@@ -149,9 +154,11 @@ header {
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }
 
-.info-card button:hover {
+.enlace-servicio:hover {
     background-color: #e74c3c;
 }
 

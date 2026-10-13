@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="parapente.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="parapente.css">
     <link
         href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
         rel="stylesheet" />
@@ -20,13 +20,13 @@
         </div>
 
         <div class="menu">
-            <p class="boton">Inicio</p>
-            <p class="boton">Nuestros Servicios</p>
+            <a class="boton" href="index.html">Inicio</a>
+            <a class="boton" href="servicios.html">Nuestros servicios</a>
             <p class="boton-telefono"> +57 300 123 4567</p>
         </div>
     </header>
     <main class="contenido-parapente">
-        <h1>Parapente ruitoque </h1>
+        <h1>Parapente en Ruitoque</h1>
 
         <video width="640" height="360" controls>
             <source src="videos/ruitoque.mp4" type="video/mp4" />
@@ -44,12 +44,12 @@
                 <label for="fechas-disponibles">Selecciona una fecha disponible:</label>
                 <select id="fechas-disponibles" name="fechas">
                     <option value="" disabled selected>-- Elige un día --</option>
-                    <option value="2026-10-15">Miércoles, 15 de Octubre de 2026</option>
-                    <option value="2026-10-18">Sábado, 18 de Octubre de 2026</option>
-                    <option value="2026-10-20">Lunes, 20 de Octubre de 2026</option>
-                    <option value="2026-10-22">Miércoles, 22 de Octubre de 2026</option>
+                    <option value="2026-10-15">Jueves, 15 de octubre de 2026</option>
+                    <option value="2026-10-18">Domingo, 18 de octubre de 2026</option>
+                    <option value="2026-10-20">Martes, 20 de octubre de 2026</option>
+                    <option value="2026-10-22">Jueves, 22 de octubre de 2026</option>
                 </select>
-                <button>Actualizar fechas</button>
+                <button type="button" disabled>Actualizar fechas</button>
             </div>
             <div class="recomendaciones">
                 <h2>Recomendaciones</h2>
