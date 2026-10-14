@@ -1,5 +1,14 @@
 @import url("parapente.css");
 
+body {
+    background-color: var(--fondo);
+    background-image: url("imagenes/cueva2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .contenido-parapente > img {
     display: block;
     width: 100%;

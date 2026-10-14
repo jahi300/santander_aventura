@@ -16,6 +16,11 @@
 body {
     padding-top: 100px;
     background-color: var(--fondo);
+    background-image: url("imagenes/parapente2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: var(--texto);
     font-family: "Montserrat", "Arial Narrow Bold", sans-serif;
 }
@@ -84,8 +89,11 @@ header {
     align-items: center;
     gap: 24px 36px;
     max-width: 1160px;
-    margin: 0 auto;
-    padding: 48px 24px 0;
+    margin: 24px auto 0;
+    padding: 48px 24px 24px;
+    border-radius: 10px;
+    background-color: rgb(255 255 255 / 94%);
+    box-shadow: 0 8px 28px rgb(0 0 0 / 18%);
 }
 
 .contenido-parapente h1 {
@@ -373,4 +381,3 @@ footer .seccion a:hover {
         text-align: center;
     }
 }
-
