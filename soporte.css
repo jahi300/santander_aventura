@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-color: #F4F6F5;
+    padding-top: 100px;
+}
+
+header {
+    background-color: rgb(30, 94, 58);
+    z-index: 1000;
+    padding: 0px 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marca img {
+    height: 75px;
+}
+
+.tittle {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.marca h2 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.boton {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    opacity: 0.8;
+    color: #F39C12;
+}
+
+.boton-telefono {
+    color: #ffffff;
+    background-color: #c0392b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.boton-telefono:hover {
+    background-color: #e74c3c;
+}
+
+.titulo-soporte {
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.titulo-soporte h2 {
+    font-size: 30px;
+    color: #1a3c34;
+}
+
+.preguntas {
+    margin: auto 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pregunta-principal {
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.pregunta-principal summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    font-weight: 700;
+    color: #1a3c34;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.pregunta-principal[open] summary {
+    background-color: #e5f0e6;
+}
+
+.pregunta-principal .icono {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background-color: #e5f0e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+}
+
+.pregunta-principal .icono::after {
+    content: "+";
+    font-weight: 400;
+    color: #1a3c34;
+}   
+
+.pregunta-principal[open] .icono {
+    background-color: #cde2ce;
+}
+
+.pregunta-principal[open] .icono::after {
+    content: "-";
+}
+
+.respuesta {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.respuesta p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #555555;
+    font-weight: 400;
+}
+
+
+
+.politicas-tyc {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    line-height: 1.6;
+}
+
+.politicas-tyc h3 {
+    font-size: 25px;
+    color: #1a3c34;
+    border-bottom: 3px solid #2e7d32;
+    padding-bottom: 10px;   
+    margin-bottom: 20px;
+}
+
+.politicas-tyc h4 {
+    font-size: 17px;
+    color: #1a3c34;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.politicas-tyc p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #555555;
+}
+
+.quienes-somos {
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.quienes-somos h2 {
+    text-align: center;
+    color: #1a3c34;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.quienes-somos h4 {
+    color: #1a3c34;
+    font-size: 1.25rem;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-left: 4px solid #2e7d32;
+    padding-left: 10px;
+}
+
+.quienes-somos p {
+    color: #4a5568;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.quienes-somos .intro {
+    font-size: 17.6px;
+    text-align: center;
+    color: #2d3748;
+    max-width: 780px;
+    margin: 0 auto 25px auto;
+}
+
+.quienes-somos img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    margin: 20px 0 30px 0;
+}
+
+
+.guia-tur {
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.guia-tur h2 {
+    text-align: center;
+    color: #1a3c34;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.guia-tur > p {
+    text-align: center;
+    font-size: 17.6px;
+    color: #555;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.presentacion {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background-color: #f8faf8;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 4px solid #2e7d32;
+}
+
+.presentacion .titulo-guia {
+    font-size: 16.8px;
+    font-weight: 700;
+    color: #2e7d32;
+    margin-bottom: 4px;
+    padding-left: 8px; 
+}
+
+.presentacion .edad {
+    font-size: 14.4px;
+    color: #64748b;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.presentacion img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.presentacion h4 {
+    color: #1a3c34;
+    font-size: 22.4px;
+    margin-bottom: 5px;
+}
+
+.experiencia {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: #eef6f0;
+    padding: 25px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.experiencia > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icono-exp {
+    width: 40px;
+    height: 40px;
+    object-fit: contain; 
+    margin-bottom: 12px;
+}
+
+.experiencia h4 {
+    color: #1a3c34;
+    font-size: 17.6px;
+    margin-bottom: 8px;
+}
+
+.experiencia p {
+    font-size: 15.2px;
+    color: #334155;
+    margin: 4px 0;
+}
+
+.compromiso {
+    text-align: center;
+    background: #eef6f0;
+    padding: 22px 25px;
+    border-radius: 14px;
+}
+
+.compromiso h4 {
+    color: #1a3c34;
+    font-size: 19.2px;
+    margin-bottom: 6px;
+}
+
+.compromiso p {
+    color: #2e7d32;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 16px;
+}
+
+
+footer {
+    background-color: rgb(30, 94, 58);
+    color: white;
+    margin-top: 50px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 10px 0 10px 0;
+}
+
+.creditos {
+    text-align: center;
+    padding: 10px;
+}
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.seccion-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.seccion p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.titulo-footer {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #F39C12;
+}
+
+.icono-footer {
+    width: auto;
+    height: 20px;
+
+}
+
+.item-red {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.linea hr {
+    border: none;
+    margin: 0 10px 0 10px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+@media (max-width: 992px) {
+    header {
+        padding: 15px 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    body {
+        padding-top: 130px;
+    }
+
+    .politicas-tyc,
+    .quienes-somos,
+    .guia-tur {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .preguntas {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 12px 15px;
+    }
+
+    body {
+        padding-top: 200px;
+    }
+
+    .marca img {
+        height: 55px;
+    }
+
+    .marca h2 {
+        font-size: 18px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .boton-telefono {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+
+    .titulo-soporte h2,
+    .quienes-somos h2,
+    .guia-tur h2 {
+        font-size: 24px;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .presentacion img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .presentacion .titulo-guia,
+    .presentacion .edad {
+        text-align: center;
+    }
+
+    .experiencia {
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px 15px;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .seccion, .seccion-redes {
+        align-items: center;
+    }
+}
