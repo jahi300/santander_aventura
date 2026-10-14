@@ -451,6 +451,32 @@ footer {
     gap: 15px;
 }
 
+footer .seccion a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer .seccion a:hover {
+    text-decoration: underline;
+}
+
+.seccion-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.icono-footer {
+    width: auto;
+    height: 20px;
+}
+
+.item-red {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .seccion p:hover {
     cursor: pointer;
     text-decoration: underline;

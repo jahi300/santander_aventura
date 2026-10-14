@@ -228,9 +228,9 @@ header {
 }
 
 footer {
-    margin-top: 56px;
-    background-color: var(--verde);
-    color: #fff;
+    background-color: rgb(30, 94, 58);
+    color: white;
+    margin-top: 50px;
 }
 
 .info {
@@ -239,13 +239,33 @@ footer {
     gap: 30px;
     align-items: flex-start;
     justify-content: space-around;
-    padding: 30px 24px;
+    padding: 10px 0 10px 0;
+}
+
+.creditos {
+    text-align: center;
+    padding: 10px;
 }
 
 .seccion {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
+}
+
+footer .seccion a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer .seccion a:hover {
+    text-decoration: underline;
+}
+
+.seccion-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .seccion p:hover {
@@ -254,23 +274,31 @@ footer {
 }
 
 .titulo-footer {
-    margin-bottom: 5px;
-    color: var(--naranja);
+    font-weight: bold;
     font-size: 16px;
-    font-weight: 700;
+    margin-bottom: 5px;
+    color: #F39C12;
+}
+
+.icono-footer {
+    width: auto;
+    height: 20px;
+
+}
+
+.item-red {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .linea hr {
+    border: none;
+    margin: 0 10px 0 10px;
     height: 1px;
-    margin: 0 10px;
-    border: 0;
-    background-color: rgb(255 255 255 / 20%);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.creditos {
-    padding: 12px;
-    text-align: center;
-}
 
 @media (max-width: 800px) {
     .contenido-parapente {
