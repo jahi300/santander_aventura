@@ -31,11 +31,12 @@ header {
     top: 0;
     display: flex;
     width: 100%;
-    min-height: 100px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10px 70px;
-    background-color: var(--verde);
+    border-bottom: 3px solid #ffaa00;
+    background: linear-gradient(90deg, #0b3b18 0%, #176b30 30%, #2ecc71 55%, #f1c40f 75%, #ff9f1c 100%);
+    box-shadow: 0 4px 25px rgb(0 0 0 / 50%);
 }
 
 .marca {
@@ -46,41 +47,72 @@ header {
 
 .marca img {
     height: 75px;
+    filter: drop-shadow(0 2px 4px rgb(0 0 0 / 40%));
+    transition: transform 0.3s ease;
+}
+
+.marca img:hover {
+    transform: scale(1.03);
 }
 
 .menu {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 35px;
 }
 
 .boton {
+    position: relative;
+    padding: 5px 0;
     color: #fff;
     cursor: pointer;
     font-size: 15px;
     font-weight: 700;
     text-decoration: none;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+    transition: color 0.3s ease;
+}
+
+.boton::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    content: '';
+    transition: width 0.3s ease;
 }
 
 .boton:hover {
-    color: var(--naranja);
+    color: #fff;
+}
+
+.boton:hover::after {
+    width: 100%;
 }
 
 .boton-telefono {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 20px;
-    border-radius: 20px;
-    background-color: var(--rojo);
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    box-shadow: 0 4px 18px rgb(231 76 60 / 60%);
     color: #fff;
     cursor: pointer;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
 }
 
 .boton-telefono:hover {
-    background-color: #e74c3c;
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ff5252 0%, #e74c3c 100%);
+    box-shadow: 0 6px 22px rgb(231 76 60 / 80%);
 }
 
 .contenido-parapente {
@@ -331,26 +363,59 @@ footer .seccion a:hover {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 992px) {
+    header {
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 768px) {
     body {
-        padding-top: 126px;
+        padding-top: 130px;
     }
 
     header {
-        min-height: 126px;
         flex-direction: column;
-        gap: 4px;
-        padding: 8px 16px;
+        gap: 12px;
+        padding: 12px 20px;
     }
 
     .marca img {
-        height: 54px;
+        height: 55px;
     }
 
     .menu {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 8px 16px;
+        gap: 15px;
+    }
+
+    .boton,
+    .boton-telefono {
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 170px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .marca img {
+        height: 55px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
     .boton,
@@ -359,7 +424,7 @@ footer .seccion a:hover {
     }
 
     .boton-telefono {
-        padding: 6px 12px;
+        padding: 6px 14px;
     }
 
     .contenido-parapente {

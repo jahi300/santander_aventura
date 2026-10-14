@@ -14,70 +14,107 @@ body {
 
 
 header {
-    background-color: rgb(30, 94, 58);
-    z-index: 1000;
-    padding: 0px 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     position: fixed;
-    width: 100%;
+    z-index: 1000;
     top: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 70px;
+    border-bottom: 3px solid #ffaa00;
+    background: linear-gradient(90deg, #0b3b18 0%, #176b30 30%, #2ecc71 55%, #f1c40f 75%, #ff9f1c 100%);
     box-sizing: border-box;
+    box-shadow: 0 4px 25px rgb(0 0 0 / 50%);
     font-family: "Montserrat", 'Arial Narrow Bold', sans-serif;
+}
 
-    .marca {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-    .menu {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-    }
+.marca img {
+    height: 75px;
+    filter: drop-shadow(0 2px 4px rgb(0 0 0 / 40%));
+    transition: transform 0.3s ease;
+}
 
-    .marca img {
-        height: 75px;
-    }
+.marca img:hover {
+    transform: scale(1.03);
+}
 
-    .marca h2 {
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .boton {
-    color: #ffffff;
-    text-decoration: none;
+.marca h2 {
+    color: #fff;
+    font-size: 20px;
     font-weight: bold;
-    font-size: 15px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.boton {
+    position: relative;
+    padding: 5px 0;
+    color: #fff;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+    transition: color 0.3s ease;
+}
+
+.boton::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    content: '';
+    transition: width 0.3s ease;
 }
 
 .boton:hover {
-    opacity: 0.8;
-    color: #F39C12;
+    color: #fff;
+}
+
+.boton:hover::after {
+    width: 100%;
 }
 
 .boton-telefono {
-    color: #ffffff;
-    background-color: #c0392b;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 8px 20px;
-    border-radius: 20px;
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    box-shadow: 0 4px 18px rgb(231 76 60 / 60%);
+    color: #fff;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
 }
 
 .boton-telefono:hover {
-    background-color: #e74c3c;
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ff5252 0%, #e74c3c 100%);
+    box-shadow: 0 6px 22px rgb(231 76 60 / 80%);
 }
+
+@media (max-width: 992px) {
+    header {
+        padding: 12px 30px;
+    }
 }
 
 .div1 {
@@ -559,12 +596,12 @@ footer .seccion a:hover {
     }
 
     header {
-        padding: 10px 20px;
+        padding: 12px 20px;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
 
         .marca img {
-            height: 50px;
+            height: 55px;
         }
 
         .menu {
@@ -576,7 +613,7 @@ footer .seccion a:hover {
         .boton,
         .boton-telefono {
             font-size: 13px;
-            padding: 6px 12px;
+            padding: 6px 14px;
         }
     }
 
