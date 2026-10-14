@@ -178,8 +178,8 @@ header {
 
 .fechas button:disabled {
     transform: none;
-    background-color: #a9b1ac;
-    cursor: not-allowed;
+    background-color: var(--rojo);
+    cursor: default;
 }
 
 .fechas button:focus-visible,

@@ -1,0 +1,17 @@
+@import url("parapente.css");
+
+.contenido-parapente > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgb(0 0 0 / 16%);
+    object-fit: cover;
+}
+
+.fechas button:disabled,
+.fechas button:disabled:hover {
+    transform: none;
+    background-color: var(--rojo);
+    cursor: default;
+}

@@ -1,12 +1,23 @@
 @import url("parapente.css");
 
-.contenido-parapente > img {
+body {
+    background-color: var(--fondo);
+    background-image: url("imagenes/prueba.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenido-parapente > iframe {
     display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
+    border: 0;
     border-radius: 8px;
     box-shadow: 0 12px 28px rgb(0 0 0 / 16%);
-    object-fit: cover;
+    background-color: #15231b;
 }
 
 .ficha-servicio {
