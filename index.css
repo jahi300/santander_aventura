@@ -395,8 +395,9 @@ section.carrusel {
 }
 
 section.testimonio {
-    padding: 3.5rem max(1.5rem, calc((100% - 1000px) / 2));
-    background: linear-gradient(135deg, #eaf2ec 0%, #eaf0f6 100%);
+    overflow: hidden;
+    padding: 3.5rem max(1.5rem, calc((100% - 1200px) / 2));
+    background: linear-gradient(120deg, #c0392b 0%, #f1c40f 52%, #f39c12 100%);
 
     > h2 {
         margin-bottom: 2rem;
@@ -416,12 +417,33 @@ section.testimonio {
         }
     }
 
+    .testimonio-layout {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
     .testimonio-contenedor {
+        position: relative;
+        z-index: 1;
         display: grid;
         max-width: 1000px;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 1.25rem;
         margin: 0 auto;
+    }
+
+    .testimonio-iglesia {
+        position: absolute;
+        z-index: 0;
+        right: -5rem;
+        bottom: -1rem;
+        display: block;
+        width: 180px;
+        height: 240px;
+        opacity: 0.28;
+        pointer-events: none;
+        filter: drop-shadow(0 8px 12px rgb(25 60 43 / 12%));
     }
 
     .testimonio-item {
@@ -460,6 +482,21 @@ section.testimonio {
         margin-top: auto;
         color: #17603d;
         font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 1050px) {
+    section.testimonio .testimonio-iglesia {
+        right: -2rem;
+        width: 140px;
+        height: 190px;
+        opacity: 0.16;
+    }
+}
+
+@media (max-width: 600px) {
+    section.testimonio .testimonio-iglesia {
+        display: none;
     }
 }
 footer {

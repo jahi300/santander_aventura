@@ -8,7 +8,48 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+.titulo{
+    
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(135, 229, 52, 0.924); /* Verde naturaleza/aventura */
+  padding: 12px 28px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px); /* Efecto cristal / Blur moderno */
+  letter-spacing: 1.5px;
+  font-size: 2.2rem;
+  
 
+}
+
+.titulo-barco {
+  display: inline-block;
+  width: 1.5em;
+  height: 1em;
+  margin-left: 0.25em;
+  vertical-align: -0.12em;
+}
+
+.titulo-rio {
+  white-space: nowrap;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background: #FFB800; /* Amarillo o naranja de rescate/aventura */
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
 .contenido-parapente {
     margin: 24px auto 0;
     padding-bottom: 24px;
